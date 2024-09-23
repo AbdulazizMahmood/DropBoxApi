@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>My DBox Client</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <script language="JavaScript" src="myAJAXlib.js"></script>
+    <script language="JavaScript" src="myJS.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        div, table {
+            margin: 15px 0;
+        }
+
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        #div1, #div2, #div4, #div6, #div11, #div100 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #div9 {
+            margin-top: 20px;
+        }
+
+        td p {
+            margin: 0;
+        }
+
+        #div3, #div5, #div7, #div10, #div12, #downloadResult {
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1><b>My DBox Client</b></h1>
+
+    <div id="div1">
+        <input type="button" id="b1" value="Connect" onclick="doQuery();" style="width: 120px;">
+    </div>
+
+    <div id="div2">
+        <input type="button" id="b2" value="Get Token" onclick="doQuery1();" style="width: 120px;">
+    </div>
+
+    <div id="div3"></div>
+
+    <div id="div4">
+        <input type="button" id="b3" value="Account Info" onclick="doQuery2();" style="width: 120px;">
+    </div>
+
+    <div id="div5"></div>
+
+    <div id="div6">
+        <input type="button" id="b4" value="Upload..." onclick="doQuery3_();" style="width: 120px;">
+    </div>
+
+    <div id="div7"></div>
+
+    <div id="div8">
+        <table>
+            <tr>
+                <td><input type="button" id="b5" value="Upload Image" onclick="doQuery3();" style="width: 120px;"></td>
+                <td>
+                    <p>Upload image to <i>MyDBoxClient_App01_files/images/</i> folder under the name <i>image_initial_uploaded.png</i></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="div11">
+        <input type="button" id="b6" value="Create Folder" onclick="doQuery4();" style="width: 120px;">
+    </div>
+
+    <div id="div100">
+        <input type="button" value="Get Item List" onclick="listDropboxItems();" style="width: 120px;">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Uploaded at</th>
+                <th>Size</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="listItem"></tbody>
+    </table>
+
+    <div id="div12"></div>
+    <div id="downloadResult"></div>
+
+    <div id="div9" style="display: none;">
+        <table>
+            <tr>
+                <td><input type="file" id="profileImageInput" accept="image/*" style="width: 150px;"></td>
+                <td><input type="button" id="setProfileButton" value="Set Profile Photo" onclick="uploadProfilePhoto();" style="width: 150px;"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="div10"></div>
+
+</body>
+</html>
